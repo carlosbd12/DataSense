@@ -1,7 +1,119 @@
-.formulario{
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section {
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: url('./images/login.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif;
+    position: relative;
+}
+
+/* Overlay oscuro sobre la imagen de fondo */
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+/* Asegurar que el contenido esté sobre el overlay */
+section > * {
+    position: relative;
+    z-index: 2;
+}
+
+section h1 {
+    color: #fff;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(45deg, #00f5ff, #00d4ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px rgba(0, 212, 255, 0.5);
+}
+
+.formulario {
+    background: rgba(26, 26, 26, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 40px rgba(0, 245, 255, 0.2);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+}
+
+.formulario label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #00d4ff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.formulario input {
+    width: 100%;
+    padding: 0.75rem;
+    background: #2a2a2a;
+    border: 2px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.formulario input:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+    background: #333;
+}
+
+.formulario input::placeholder {
+    color: #666;
+}
+
+.formulario button {
+    width: 100%;
+    padding: 0.75rem;
+    background: linear-gradient(45deg, #00f5ff, #00d4ff);
+    color: #0f0f0f;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.formulario button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 212, 255, 0.4);
+}
+
+.formulario button:active {
+    transform: translateY(0);
 }
