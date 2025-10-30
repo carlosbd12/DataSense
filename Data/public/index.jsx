@@ -1,10 +1,13 @@
+// Responsabilidad: Montar la aplicación React en el DOM
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { Formulario } from './components/formulario.jsx';  // ← Nota las llaves {}
+import App from './App.jsx';
+import './styles/global.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
     <React.StrictMode>
-        <Formulario />
+        <App />
     </React.StrictMode>
 );

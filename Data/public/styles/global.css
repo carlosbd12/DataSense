@@ -10,7 +10,7 @@ section {
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-image: url('./images/login.jpg');
+    background-image: url('../components/images/login.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -116,4 +116,14 @@ section h1 {
 
 .formulario button:active {
     transform: translateY(0);
+}
+
+.error-message {
+    color: red;
+    background-color: #ffe6e6;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ffcccc;
+    margin-top: 10px;
+    font-size: 14px;
 }
